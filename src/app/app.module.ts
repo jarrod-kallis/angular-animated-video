@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { ProgressComponent } from './progress.component';
 import { ToolbarComponent } from './toolbar.component';
 import { OptionsComponent } from './options.component';
+import { PlayOverlayComponent } from './play-overlay/play-overlay.component';
+import { VideoTitleComponent } from './video-title/video-title.component';
 
 import { VideoService } from './video.service';
 
@@ -19,7 +21,9 @@ import { TimeDisplayPipe } from "./timedisplay.pipe";
     ProgressComponent,
     ToolbarComponent,
     OptionsComponent,
-    TimeDisplayPipe
+    TimeDisplayPipe,
+    PlayOverlayComponent,
+    VideoTitleComponent
   ],
   imports: [
     BrowserModule,

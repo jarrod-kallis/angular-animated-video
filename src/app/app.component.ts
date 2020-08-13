@@ -7,11 +7,9 @@ import { VideoService } from "./video.service";
     <div id="fullPlayer" (mouseup)="videoService.dragStop($event)" (mousemove)="videoService.dragMove($event)" (mouseleave)="videoService.dragStop($event)">
       <div class="embed-responsive embed-responsive-16by9">
         <video id="videoDisplay" muted (click)="videoService.playVideo()" width="100%" height="100%" class="embed-responsive-item"></video>
-        <div id="bigPlayButton" (click)="videoService.playVideo()">
-          <i class="fa fa-play"></i>
-        </div>
-        <div id="videoTitle">{{videoService.currentTitle}}</div>
-        <video-options></video-options>
+        <app-play-overlay (click)="videoService.playVideo()"></app-play-overlay>
+        <app-video-title>{{ videoService.currentTitle }}</app-video-title>
+        <video-options style="display: none;"></video-options>
       </div>
       <video-progress></video-progress>
       <video-toolbar></video-toolbar>
