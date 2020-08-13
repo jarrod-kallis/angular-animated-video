@@ -18,7 +18,7 @@ export class VideoService {
     // Angular animation states must be defined as strings
     public showDetails: string = 'false';
     public currentDesc: string = "A very nice video...";
-    public playlist: Array<Object> = [];
+    public playlist: Array<{ title: string, path: string, description: string }> = [];
 
     constructor(private http: Http) { }
 

@@ -9,7 +9,7 @@ import { VideoService } from "./video.service";
         <video id="videoDisplay" muted (click)="videoService.playVideo()" width="100%" height="100%" class="embed-responsive-item"></video>
         <app-play-overlay (click)="videoService.playVideo()" [isHidden]="videoService.checkHidden()"></app-play-overlay>
         <app-video-title [isHidden]="videoService.checkHidden()">{{ videoService.currentTitle }}</app-video-title>
-        <video-options style="display: none;"></video-options>
+        <video-options [isVisible]="videoService.showDetails"></video-options>
       </div>
       <video-progress></video-progress>
       <video-toolbar></video-toolbar>
