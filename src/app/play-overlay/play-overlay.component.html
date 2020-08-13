@@ -1,3 +1,4 @@
-<div>
+<div [@hiddenChanged]="isHidden" (@hiddenChanged.start)="animationBegin($event)"
+  (@hiddenChanged.done)="animationEnd($event)">
   <i class="fa fa-play"></i>
 </div>
